@@ -6755,6 +6755,15 @@
 <rectangle x1="46.73473125" y1="25.185371875" x2="48.1749125" y2="25.203146875" layer="200" rot="R270"/>
 <rectangle x1="46.894753125" y1="25.18536875" x2="48.050453125" y2="25.20315" layer="200" rot="R270"/>
 <rectangle x1="47.07255" y1="25.185371875" x2="47.9082125" y2="25.203146875" layer="200" rot="R270"/>
+<text x="8.450371875" y="12.4117" size="1.27" layer="26" rot="MR0">GND</text>
+<text x="7.615321875" y="10.17131875" size="1.27" layer="26" rot="MR0">5V</text>
+<text x="8.53966875" y="7.73068125" size="1.27" layer="25" rot="MR0">PWM</text>
+<text x="25.003553125" y="12.322796875" size="1.27" layer="26" rot="MR0">GND</text>
+<text x="24.328521875" y="10.117978125" size="1.27" layer="26" rot="MR0">5V</text>
+<text x="25.25286875" y="7.677340625" size="1.27" layer="25" rot="MR0">PWM</text>
+<text x="42.12569375" y="12.57171875" size="1.27" layer="26" rot="MR0">GND</text>
+<text x="41.4506625" y="10.3313375" size="1.27" layer="26" rot="MR0">5V</text>
+<text x="42.375009375" y="7.8907" size="1.27" layer="25" rot="MR0">PWM</text>
 </plain>
 <libraries>
 <library name="SparkFun-Passives">
