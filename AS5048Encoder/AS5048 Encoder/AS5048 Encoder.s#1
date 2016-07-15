@@ -1375,8 +1375,6 @@ Analog ICs&lt;p&gt;</description>
 <pinref part="U$1" gate="G$1" pin="PWM"/>
 <wire x1="81.28" y1="27.94" x2="83.82" y2="27.94" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="SIGNAL" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
 <wire x1="66.04" y1="50.8" x2="66.04" y2="45.72" width="0.1524" layer="91"/>

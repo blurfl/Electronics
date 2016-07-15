@@ -1277,10 +1277,10 @@ Analog ICs&lt;p&gt;</description>
 <devices>
 <device name="" package="TSOP14">
 <connects>
-<connect gate="G$1" pin="3V3" pad="10"/>
-<connect gate="G$1" pin="5V" pad="9"/>
-<connect gate="G$1" pin="GND" pad="11"/>
-<connect gate="G$1" pin="PWM" pad="12"/>
+<connect gate="G$1" pin="3V3" pad="12"/>
+<connect gate="G$1" pin="5V" pad="11"/>
+<connect gate="G$1" pin="GND" pad="13"/>
+<connect gate="G$1" pin="PWM" pad="14"/>
 </connects>
 <technologies>
 <technology name=""/>
