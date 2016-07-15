@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="3.93700787" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="1" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -2350,6 +2350,8 @@
 <hole x="10" y="10" drill="4.5"/>
 <hole x="40" y="10" drill="4.5"/>
 <wire x1="50" y1="0" x2="0" y2="0" width="0" layer="20"/>
+<dimension x1="10" y1="10" x2="40" y2="10" x3="25" y3="2.2" textsize="1.778" layer="22"/>
+<dimension x1="10" y1="10" x2="25" y2="44" x3="13.9954" y3="27" textsize="1.778" layer="22" dtype="vertical"/>
 </plain>
 <libraries>
 <library name="SparkFun-Passives">
@@ -2764,18 +2766,35 @@ design rules under a new name.</description>
 </signal>
 </signals>
 <errors>
-<approved hash="5,1,cd0af5c3831c025e"/>
-<approved hash="5,1,b02675d38373ff0d"/>
-<approved hash="5,1,bd5475f38353f27f"/>
-<approved hash="5,1,3ab8f5c38370f580"/>
-<approved hash="5,1,34d3f5f38352fbf9"/>
-<approved hash="5,1,b78f75c38313f8d4"/>
-<approved hash="5,1,0352898686fff5a3"/>
-<approved hash="5,1,8481098686d8f257"/>
-<approved hash="5,1,f4e7d6d640249871"/>
-<approved hash="5,1,89d7098686fcff25"/>
-<approved hash="5,1,8e6e099686fef88e"/>
-<approved hash="5,1,0d3b89b686dffbda"/>
+<approved hash="18,30,40c5bdea1de9a0c2"/>
+<approved hash="18,30,aee3c258c278aa83"/>
+<approved hash="18,30,660c770aae0beb08"/>
+<approved hash="18,30,623bd73aae3b6738"/>
+<approved hash="18,30,a6934a2b6f30c80b"/>
+<approved hash="18,30,8b7b269c0df2d85d"/>
+<approved hash="18,30,caab0bf8cf946cb1"/>
+<approved hash="18,30,c4aa03faadab6888"/>
+<approved hash="18,30,03a54cf890aa4d8e"/>
+<approved hash="18,30,0bae3afedcabdf8e"/>
+<approved hash="18,30,20300cdc6154e5a2"/>
+<approved hash="18,30,bbe032450afbe83b"/>
+<approved hash="18,30,98c4a5ea25e858c2"/>
+<approved hash="4,1,0e450385e0afac88"/>
+<approved hash="5,1,02e800c08d7258d2"/>
+<approved hash="5,1,819d80c08d535b86"/>
+<approved hash="5,1,8fc480308d9355ef"/>
+<approved hash="5,1,081700d08d74523b"/>
+<approved hash="5,1,956380f08d534f48"/>
+<approved hash="5,1,054101308c905f69"/>
+<approved hash="5,1,b8168487821e5506"/>
+<approved hash="5,1,3f22048782ff52d3"/>
+<approved hash="5,1,326f6a2357a4c58d"/>
+<approved hash="5,1,35cb04b782df582a"/>
+<approved hash="5,1,b6bf849782f85b59"/>
+<approved hash="5,1,a24d84b782dc4faf"/>
+<approved hash="4,1,c2a78cc98f9cf3d1"/>
+<approved hash="4,16,0e450385e0afac88"/>
+<approved hash="4,16,c2a78cc98f9cf3d1"/>
 </errors>
 </board>
 </drawing>
