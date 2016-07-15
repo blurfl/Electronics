@@ -1478,7 +1478,7 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <plain>
 </plain>
 <instances>
-<instance part="GND8" gate="1" x="12.7" y="15.24"/>
+<instance part="GND8" gate="1" x="17.78" y="15.24"/>
 <instance part="C3" gate="G$1" x="12.7" y="22.86"/>
 <instance part="C4" gate="G$1" x="22.86" y="22.86"/>
 <instance part="SUPPLY6" gate="1" x="12.7" y="27.94"/>
@@ -1494,7 +1494,9 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 <pinref part="C3" gate="G$1" pin="-"/>
 <pinref part="C4" gate="G$1" pin="-"/>
-<wire x1="12.7" y1="17.78" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="17.78" x2="22.86" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="17.78" x2="12.7" y2="17.78" width="0.1524" layer="91"/>
+<junction x="17.78" y="17.78"/>
 </segment>
 <segment>
 <wire x1="53.34" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
