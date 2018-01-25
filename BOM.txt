@@ -1,8 +1,8 @@
 PCB BOM
 
-XH-Series Connectors: 455-2271-ND             3        J1-3
-Power Jack:           CP-202BH-ND             1        J4
-1x8 .1" headers:      732-5321-ND             6        J5-8
+XH-Series Connectors: 455-2271-ND             3        MP1-3
+Power Jack:           CP-202BH-ND             1        J10
+1x8 .1" headers:      732-5321-ND             6        Arduino Pwr, ADCL, ADCH, Comm., PWML, PWMH
 18x2 .1" headers:     732-5309-ND             1        XIO
 H-Bridge:             TLE52062SAKSA1-ND       3        IC-1,2,3
 Indicator LED Green:  160-1130-ND             1        LED 1: 5V
