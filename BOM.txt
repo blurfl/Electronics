@@ -11,4 +11,6 @@ Current Limiting R1:  1263-CF14JB270R-CHP     1        R1
 Current Limiting R2:  1.0KQBK-ND              1        R2
 25.4x34.93mm heatsink HS351-ND                3        N/A
 Capacitors 100uF      399-6650-1-ND           3        C1, C3, C5
+Capacitors 1uF        BC1168CT-ND             1        C7
 Capacitors 0.1uF      BC1101CT-ND             3        C2, C4, C6
+ 
