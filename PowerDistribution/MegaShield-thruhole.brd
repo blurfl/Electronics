@@ -5793,6 +5793,10 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <attribute name="NAME" x="8.128" y="5.08" size="0.8128" layer="25" display="off"/>
 <attribute name="VALUE" x="8.509" y="9.271" size="0.8128" layer="27"/>
 </element>
+<element name="C8" library="SparkFun" package="CAP-PTH-SMALL" value="1uF" x="73.66" y="46.99" smashed="yes">
+<attribute name="NAME" x="74.168" y="48.26" size="0.8128" layer="25" display="off"/>
+<attribute name="VALUE" x="73.914" y="44.831" size="0.8128" layer="21"/>
+</element>
 </elements>
 <signals>
 <signal name="GND" class="2">
@@ -5853,6 +5857,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <contactref element="XIO" pad="6"/>
 <wire x1="15.24" y1="7.62" x2="12.065" y2="7.62" width="0.1524" layer="16"/>
 <contactref element="C7" pad="2"/>
+<contactref element="C8" pad="2"/>
 </signal>
 <signal name="INC2B">
 <contactref element="MP2" pad="P$6"/>
@@ -5978,6 +5983,7 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="5.08" y1="37.973" x2="7.747" y2="40.64" width="0.254" layer="1"/>
 <wire x1="7.747" y1="40.64" x2="10.16" y2="40.64" width="0.254" layer="1"/>
 <contactref element="C7" pad="1"/>
+<contactref element="C8" pad="1"/>
 <wire x1="20.32" y1="7.62" x2="42.545" y2="29.29" width="0" layer="19" extent="1-1"/>
 <wire x1="10.16" y1="7.62" x2="15.24" y2="2.54" width="0" layer="19" extent="16-16"/>
 </signal>

@@ -4707,6 +4707,7 @@ drill 1.0 mm</description>
 <part name="TP2" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="SparkFun" deviceset="CAP" device="PTH" value="1uF"/>
+<part name="C8" library="SparkFun" deviceset="CAP" device="PTH" value="1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -4847,8 +4848,8 @@ GND-5V  GND-GND -&gt; rev.5256
 <instance part="POWER" gate="A" x="55.88" y="238.76" smashed="yes" rot="MR0">
 <attribute name="NAME" x="52.07" y="227.584" size="1.778" layer="95" rot="MR0"/>
 </instance>
-<instance part="GND1" gate="1" x="106.68" y="116.84" smashed="yes">
-<attribute name="VALUE" x="104.14" y="114.3" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="106.68" y="114.3" smashed="yes">
+<attribute name="VALUE" x="104.14" y="111.76" size="1.778" layer="96"/>
 </instance>
 <instance part="TP1" gate="1" x="160.02" y="180.34"/>
 <instance part="TP2" gate="1" x="165.1" y="180.34"/>
@@ -4856,6 +4857,7 @@ GND-5V  GND-GND -&gt; rev.5256
 <attribute name="VALUE" x="157.48" y="172.72" size="1.778" layer="96"/>
 </instance>
 <instance part="C7" gate="G$1" x="20.32" y="236.22" rot="MR0"/>
+<instance part="C8" gate="G$1" x="124.46" y="121.92"/>
 </instances>
 <busses>
 </busses>
@@ -5022,13 +5024,15 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="XIO" gate="A" pin="4"/>
 <wire x1="106.68" y1="139.7" x2="106.68" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="106.68" y1="119.38" x2="106.68" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="132.08" x2="106.68" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="121.92" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="116.84" x2="106.68" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="132.08" x2="106.68" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="XIO" gate="A" pin="6"/>
-<wire x1="104.14" y1="121.92" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
-<junction x="106.68" y="121.92"/>
+<wire x1="104.14" y1="119.38" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
+<junction x="106.68" y="119.38"/>
 <junction x="106.68" y="132.08"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="119.38" x2="124.46" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INC2B" class="0">
@@ -5155,9 +5159,10 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="261.62" y="213.36" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="132.08" x2="109.22" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="121.92" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="121.92" x2="116.84" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="132.08" x2="109.22" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="124.46" x2="116.84" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="124.46" x2="116.84" y2="127" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="127" x2="116.84" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="149.86" x2="109.22" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="149.86" x2="116.84" y2="154.94" width="0.1524" layer="91"/>
@@ -5169,6 +5174,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <wire x1="104.14" y1="139.7" x2="104.14" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
 <junction x="109.22" y="149.86"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="127" x2="116.84" y2="127" width="0.1524" layer="91"/>
+<junction x="116.84" y="127"/>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="2"/>
