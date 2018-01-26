@@ -4685,11 +4685,11 @@ drill 1.0 mm</description>
 <part name="HS3" library="heatsink-aavid" deviceset="TO-220/218" device="-531XXXXXXXX" value="TO-220/218-531002B02500G">
 <attribute name="DIGIKEY" value="HS351-ND"/>
 </part>
-<part name="C4" library="SparkFun" deviceset="CAP" device="PTH" value="100nF"/>
+<part name="C4" library="SparkFun" deviceset="CAP" device="PTH" value="0.1uF"/>
 <part name="C3" library="SparkFun" deviceset="CAP_POL" device="PTH1" value="100uF"/>
-<part name="C2" library="SparkFun" deviceset="CAP" device="PTH" value="100nF"/>
+<part name="C2" library="SparkFun" deviceset="CAP" device="PTH" value="0.1uF"/>
 <part name="C1" library="SparkFun" deviceset="CAP_POL" device="PTH1" value="100uF"/>
-<part name="C6" library="SparkFun" deviceset="CAP" device="PTH" value="100nF"/>
+<part name="C6" library="SparkFun" deviceset="CAP" device="PTH" value="0.1uF"/>
 <part name="C5" library="SparkFun" deviceset="CAP_POL" device="PTH1" value="100uF"/>
 <part name="XIO" library="SmartPrj" deviceset="PINHD-2X18" device="" value="18x2F-H8.5"/>
 <part name="5V" library="supply1" deviceset="+5V" device=""/>
@@ -4706,6 +4706,7 @@ drill 1.0 mm</description>
 <part name="TP1" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="TP2" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="C7" library="SparkFun" deviceset="CAP" device="PTH" value="1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -4742,13 +4743,13 @@ drill 1.0 mm</description>
 <text x="284.48" y="246.38" size="6.4516" layer="91">Motor
 Connectors</text>
 <text x="309.88" y="195.58" size="1.778" layer="91" rot="R180">Motor 3</text>
-<text x="53.34" y="58.42" size="1.778" layer="91">On the original Maslow L298P boards, pins 3-4
-and 33-34 on XIO were used to indicate the 
+<text x="53.34" y="58.42" size="1.778" layer="91">On the original Maslow L298P boards, pins 22-23
+and 52-53 on XIO were used to indicate the 
 board revision number in binary. 
 The software read these pins and detect the 
 shield version.
 
-#33-#34 #3 - #4
+#53-#52 #23-#22
 -------  ------
 GND-GND GND-5V -&gt; rev.0001
 GND-GND 5V-GND -&gt; rev.0002
@@ -4757,8 +4758,8 @@ GND-GND 5V-5V  -&gt; rev.0003
 Because gpio33 and 34 are used for 
 SPI this board uses XIO 3-6.
 
-#5 - #6 #3 - #4   
-------- -------
+#25-#24 #23-#22
+-------  ------
 GND-5V  GND-GND -&gt; rev.5256
 </text>
 <text x="68.58" y="119.38" size="1.6764" layer="91" rot="R90">(SS)</text>
@@ -4844,16 +4845,17 @@ GND-5V  GND-GND -&gt; rev.5256
 <attribute name="VALUE" x="35.56" y="254" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="POWER" gate="A" x="55.88" y="238.76" smashed="yes" rot="MR0">
-<attribute name="NAME" x="52.07" y="239.395" size="1.778" layer="95" rot="MR0"/>
+<attribute name="NAME" x="52.07" y="227.584" size="1.778" layer="95" rot="MR0"/>
 </instance>
-<instance part="GND1" gate="1" x="104.14" y="157.48" smashed="yes" rot="R180">
-<attribute name="VALUE" x="106.68" y="160.02" size="1.778" layer="96" rot="R180"/>
+<instance part="GND1" gate="1" x="106.68" y="116.84" smashed="yes">
+<attribute name="VALUE" x="104.14" y="114.3" size="1.778" layer="96"/>
 </instance>
 <instance part="TP1" gate="1" x="160.02" y="180.34"/>
 <instance part="TP2" gate="1" x="165.1" y="180.34"/>
 <instance part="GND2" gate="1" x="160.02" y="175.26" smashed="yes">
 <attribute name="VALUE" x="157.48" y="172.72" size="1.778" layer="96"/>
 </instance>
+<instance part="C7" gate="G$1" x="20.32" y="236.22" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -5000,6 +5002,8 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="POWER" gate="A" pin="6"/>
 <pinref part="POWER" gate="A" pin="7"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="27.94" y1="233.68" x2="20.32" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PWMH" gate="A" pin="7"/>
@@ -5007,23 +5011,24 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="100.584" y="243.332" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="XIO" gate="A" pin="5"/>
-<wire x1="104.14" y1="139.7" x2="104.14" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="149.86" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="XIO" gate="A" pin="3"/>
-<wire x1="106.68" y1="149.86" x2="106.68" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="XIO" gate="A" pin="4"/>
-<wire x1="106.68" y1="139.7" x2="106.68" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="104.14" y1="154.94" x2="104.14" y2="149.86" width="0.1524" layer="91"/>
-<junction x="104.14" y="149.86"/>
-</segment>
-<segment>
 <pinref part="TP1" gate="1" pin="MP"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="TP2" gate="1" pin="MP"/>
 <wire x1="165.1" y1="177.8" x2="160.02" y2="177.8" width="0.1524" layer="91"/>
 <junction x="160.02" y="177.8"/>
+</segment>
+<segment>
+<pinref part="XIO" gate="A" pin="3"/>
+<pinref part="XIO" gate="A" pin="4"/>
+<wire x1="106.68" y1="139.7" x2="106.68" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="106.68" y1="119.38" x2="106.68" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="132.08" x2="106.68" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="121.92" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="XIO" gate="A" pin="6"/>
+<wire x1="104.14" y1="121.92" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
+<junction x="106.68" y="121.92"/>
+<junction x="106.68" y="132.08"/>
 </segment>
 </net>
 <net name="INC2B" class="0">
@@ -5160,10 +5165,10 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="XIO" gate="A" pin="2"/>
 <pinref part="XIO" gate="A" pin="1"/>
 <pinref part="5V" gate="1" pin="+5V"/>
-<wire x1="104.14" y1="132.08" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="XIO" gate="A" pin="6"/>
-<wire x1="104.14" y1="121.92" x2="109.22" y2="121.92" width="0.1524" layer="91"/>
-<junction x="109.22" y="121.92"/>
+<pinref part="XIO" gate="A" pin="5"/>
+<wire x1="104.14" y1="139.7" x2="104.14" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
+<junction x="109.22" y="149.86"/>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="2"/>
@@ -5181,7 +5186,8 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="261.62" y="198.12" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="27.94" y1="238.76" x2="27.94" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="238.76" x2="27.94" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="241.3" x2="27.94" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="238.76" x2="40.64" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="238.76" x2="27.94" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="246.38" x2="40.64" y2="246.38" width="0.1524" layer="91"/>
@@ -5190,6 +5196,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="P+4" gate="1" pin="+5V"/>
 <pinref part="POWER" gate="A" pin="5"/>
 <pinref part="POWER" gate="A" pin="2"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="241.3" x2="20.32" y2="241.3" width="0.1524" layer="91"/>
+<junction x="27.94" y="241.3"/>
 </segment>
 </net>
 <net name="12V" class="0">
@@ -5383,9 +5392,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="238.76" y="231.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="83.82" y1="132.08" x2="83.82" y2="111.76" width="0.1524" layer="91"/>
-<label x="83.185" y="112.395" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="22"/>
+<wire x1="81.28" y1="160.02" x2="81.28" y2="139.7" width="0.1524" layer="91"/>
+<label x="81.28" y="152.4" size="1.778" layer="95" rot="R90"/>
+<pinref part="XIO" gate="A" pin="23"/>
 </segment>
 </net>
 <net name="AUX1" class="0">
@@ -5395,9 +5404,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="238.76" y="248.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="86.36" y1="132.08" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
-<label x="85.725" y="112.395" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="20"/>
+<wire x1="83.82" y1="139.7" x2="83.82" y2="160.02" width="0.1524" layer="91"/>
+<label x="83.82" y="152.4" size="1.778" layer="95" rot="R90"/>
+<pinref part="XIO" gate="A" pin="21"/>
 </segment>
 </net>
 <net name="AUX2" class="0">
@@ -5407,9 +5416,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="261.62" y="248.92" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="83.82" y1="139.7" x2="83.82" y2="160.02" width="0.1524" layer="91"/>
-<label x="83.185" y="153.67" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="21"/>
+<wire x1="83.82" y1="132.08" x2="83.82" y2="111.76" width="0.1524" layer="91"/>
+<label x="83.82" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="XIO" gate="A" pin="22"/>
 </segment>
 </net>
 <net name="AUX4" class="0">
@@ -5419,9 +5428,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="261.62" y="231.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="81.28" y1="160.02" x2="81.28" y2="139.7" width="0.1524" layer="91"/>
-<label x="80.645" y="153.67" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="23"/>
+<pinref part="XIO" gate="A" pin="24"/>
+<wire x1="81.28" y1="132.08" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
+<label x="81.28" y="111.76" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="M3+" class="0">
@@ -5492,7 +5501,7 @@ GND-5V  GND-GND -&gt; rev.5256
 </segment>
 <segment>
 <wire x1="68.58" y1="175.26" x2="58.42" y2="175.26" width="0.1524" layer="91"/>
-<label x="68.58" y="174.625" size="1.778" layer="95" rot="MR180"/>
+<label x="71.12" y="175.26" size="1.778" layer="95" rot="MR0"/>
 <pinref part="ADCH" gate="A" pin="7"/>
 </segment>
 </net>
@@ -5504,7 +5513,7 @@ GND-5V  GND-GND -&gt; rev.5256
 </segment>
 <segment>
 <wire x1="58.42" y1="172.72" x2="68.58" y2="172.72" width="0.1524" layer="91"/>
-<label x="68.58" y="172.085" size="1.778" layer="95" rot="MR180"/>
+<label x="71.12" y="172.72" size="1.778" layer="95" rot="MR0"/>
 <pinref part="ADCH" gate="A" pin="8"/>
 </segment>
 </net>
@@ -5623,12 +5632,6 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="XIO" gate="A" pin="30"/>
 </segment>
 </net>
-<net name="PL1" class="0">
-<segment>
-<wire x1="73.66" y1="139.7" x2="73.66" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="XIO" gate="A" pin="29"/>
-</segment>
-</net>
 <net name="AUX7" class="0">
 <segment>
 <pinref part="J7" gate="G$1" pin="3"/>
@@ -5636,9 +5639,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="238.76" y="200.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="78.74" y1="132.08" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
-<label x="78.105" y="112.395" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="26"/>
+<pinref part="XIO" gate="A" pin="25"/>
+<wire x1="78.74" y1="139.7" x2="78.74" y2="160.02" width="0.1524" layer="91"/>
+<label x="78.74" y="152.4" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="AUX8" class="0">
@@ -5648,9 +5651,9 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="261.62" y="200.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="76.2" y1="139.7" x2="76.2" y2="160.02" width="0.1524" layer="91"/>
-<label x="75.565" y="153.67" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="27"/>
+<pinref part="XIO" gate="A" pin="26"/>
+<wire x1="78.74" y1="132.08" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
+<label x="78.74" y="111.76" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="AUX9" class="0">
@@ -5660,15 +5663,15 @@ GND-5V  GND-GND -&gt; rev.5256
 <label x="238.76" y="185.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="76.2" y1="111.76" x2="76.2" y2="132.08" width="0.1524" layer="91"/>
-<label x="75.565" y="112.395" size="1.778" layer="95" rot="R90"/>
-<pinref part="XIO" gate="A" pin="28"/>
+<wire x1="76.2" y1="139.7" x2="76.2" y2="160.02" width="0.1524" layer="91"/>
+<label x="76.2" y="152.4" size="1.778" layer="95" rot="R90"/>
+<pinref part="XIO" gate="A" pin="27"/>
 </segment>
 </net>
 <net name="VIN" class="1">
 <segment>
 <wire x1="33.02" y1="231.14" x2="58.42" y2="231.14" width="0.1524" layer="91"/>
-<label x="33.02" y="230.505" size="1.778" layer="95"/>
+<label x="33.02" y="231.14" size="1.778" layer="95"/>
 <pinref part="POWER" gate="A" pin="8"/>
 </segment>
 </net>
