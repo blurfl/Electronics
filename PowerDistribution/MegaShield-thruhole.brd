@@ -5858,6 +5858,10 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 <wire x1="15.24" y1="7.62" x2="12.065" y2="7.62" width="0.1524" layer="16"/>
 <contactref element="C7" pad="2"/>
 <contactref element="C8" pad="2"/>
+<contactref element="XIO" pad="7"/>
+<contactref element="XIO" pad="8"/>
+<wire x1="15.24" y1="10.16" x2="12.065" y2="10.16" width="0.1524" layer="16"/>
+<wire x1="17.78" y1="10.16" x2="20.955" y2="10.16" width="0.1524" layer="16"/>
 </signal>
 <signal name="INC2B">
 <contactref element="MP2" pad="P$6"/>
@@ -6268,12 +6272,6 @@ Please ensure your boards meet these minimum design rule requirements.</descript
 </signal>
 <signal name="PD7">
 <contactref element="XIO" pad="19"/>
-</signal>
-<signal name="PA4">
-<contactref element="XIO" pad="7"/>
-</signal>
-<signal name="PA5">
-<contactref element="XIO" pad="8"/>
 </signal>
 <signal name="PA6">
 <contactref element="XIO" pad="9"/>

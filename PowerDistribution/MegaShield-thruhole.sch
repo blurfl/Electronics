@@ -5033,6 +5033,13 @@ GND-5V  GND-GND -&gt; rev.5256
 <junction x="106.68" y="132.08"/>
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="119.38" x2="124.46" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="132.08" x2="101.6" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="XIO" gate="A" pin="8"/>
+<wire x1="101.6" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
+<junction x="104.14" y="119.38"/>
+<wire x1="101.6" y1="139.7" x2="101.6" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="XIO" gate="A" pin="7"/>
+<junction x="101.6" y="132.08"/>
 </segment>
 </net>
 <net name="INC2B" class="0">
@@ -5610,18 +5617,6 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="XIO" gate="A" pin="19"/>
 </segment>
 </net>
-<net name="PA4" class="0">
-<segment>
-<wire x1="101.6" y1="139.7" x2="101.6" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="XIO" gate="A" pin="7"/>
-</segment>
-</net>
-<net name="PA5" class="0">
-<segment>
-<wire x1="101.6" y1="132.08" x2="101.6" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="XIO" gate="A" pin="8"/>
-</segment>
-</net>
 <net name="PA6" class="0">
 <segment>
 <wire x1="99.06" y1="149.86" x2="99.06" y2="139.7" width="0.1524" layer="91"/>
@@ -5699,13 +5694,6 @@ GND-5V  GND-GND -&gt; rev.5256
 <approved hash="102,1,27.94,248.92,+5V,5V,,,,"/>
 <approved hash="106,1,33.02,248.92,+3V3,,,,,"/>
 <approved hash="106,1,58.42,241.3,+3V3,,,,,"/>
-<approved hash="106,1,110.744,240.792,END,,,,,"/>
-<approved hash="106,1,106.68,139.7,PA0,,,,,"/>
-<approved hash="106,1,106.68,132.08,PA1,,,,,"/>
-<approved hash="106,1,104.14,139.7,PA2,,,,,"/>
-<approved hash="106,1,104.14,132.08,PA3,,,,,"/>
-<approved hash="106,1,101.6,139.7,PA4,,,,,"/>
-<approved hash="106,1,101.6,132.08,PA5,,,,,"/>
 <approved hash="106,1,99.06,139.7,PA6,,,,,"/>
 <approved hash="106,1,99.06,132.08,PA7,,,,,"/>
 <approved hash="106,1,68.58,132.08,PB0,,,,,"/>
@@ -5722,23 +5710,11 @@ GND-5V  GND-GND -&gt; rev.5256
 <approved hash="106,1,96.52,139.7,PC7,,,,,"/>
 <approved hash="106,1,86.36,139.7,PD7,,,,,"/>
 <approved hash="106,1,73.66,132.08,PL0,,,,,"/>
-<approved hash="106,1,73.66,139.7,PL1,,,,,"/>
 <approved hash="106,1,58.42,231.14,VIN,,,,,"/>
 <approved hash="113,1,117.871,211.582,PWML,,,,,"/>
 <approved hash="113,1,117.871,236.982,PWMH,,,,,"/>
 <approved hash="113,1,123.422,183.642,COMMUNICATION,,,,,"/>
-<approved hash="113,1,199.39,238.438,USB,,,,,"/>
-<approved hash="113,1,258.403,232.605,J1,,,,,"/>
-<approved hash="113,1,258.403,214.825,J3,,,,,"/>
-<approved hash="113,1,281.263,214.825,J4,,,,,"/>
-<approved hash="113,1,281.263,232.605,J2,,,,,"/>
-<approved hash="113,1,258.403,199.585,J5,,,,,"/>
-<approved hash="113,1,281.263,199.585,J6,,,,,"/>
 <approved hash="113,1,53.8334,209.55,ADCL,,,,,"/>
-<approved hash="113,1,198.967,228.278,12VPOWER,,,,,"/>
-<approved hash="113,1,258.403,184.345,J7,,,,,"/>
-<approved hash="113,1,281.263,184.345,J8,,,,,"/>
-<approved hash="113,1,258.403,169.105,J9,,,,,"/>
 </errors>
 </schematic>
 </drawing>

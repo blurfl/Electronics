@@ -5443,8 +5443,8 @@ GND-5V  GND-GND -&gt; rev.5256
 <instance part="GND2" gate="1" x="160.02" y="175.26" smashed="yes">
 <attribute name="VALUE" x="157.48" y="172.72" size="1.778" layer="96"/>
 </instance>
-<instance part="C7" gate="G$1" x="20.32" y="236.22" rot="MR0"/>
-<instance part="C8" gate="G$1" x="124.46" y="121.92"/>
+<instance part="C7" gate="G$1" x="20.32" y="238.76" rot="MR0"/>
+<instance part="C8" gate="G$1" x="124.46" y="124.46"/>
 </instances>
 <busses>
 </busses>
@@ -5592,7 +5592,7 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="POWER" gate="A" pin="6"/>
 <pinref part="POWER" gate="A" pin="7"/>
 <pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="233.68" x2="20.32" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="233.68" x2="20.32" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PWMH" gate="A" pin="7"/>
@@ -5619,7 +5619,7 @@ GND-5V  GND-GND -&gt; rev.5256
 <junction x="106.68" y="119.38"/>
 <junction x="106.68" y="132.08"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="119.38" x2="124.46" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="119.38" x2="124.46" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="132.08" x2="101.6" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="XIO" gate="A" pin="8"/>
 <wire x1="104.14" y1="119.38" x2="101.6" y2="119.38" width="0.1524" layer="91"/>
@@ -5769,7 +5769,7 @@ GND-5V  GND-GND -&gt; rev.5256
 <wire x1="104.14" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
 <junction x="109.22" y="149.86"/>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="124.46" x2="116.84" y2="127" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="127" x2="116.84" y2="127" width="0.1524" layer="91"/>
 <junction x="116.84" y="127"/>
 </segment>
 <segment>
@@ -5799,7 +5799,7 @@ GND-5V  GND-GND -&gt; rev.5256
 <pinref part="POWER" gate="A" pin="5"/>
 <pinref part="POWER" gate="A" pin="2"/>
 <pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="241.3" x2="20.32" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="241.3" x2="20.32" y2="241.3" width="0.1524" layer="91"/>
 <junction x="27.94" y="241.3"/>
 </segment>
 </net>
